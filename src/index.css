@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body { background: #e7ebf2; }
+body { @apply font-body text-on-surface antialiased; -webkit-tap-highlight-color: transparent; }
+.app-shell {
+  background: linear-gradient(180deg, #1d4ed8 0%, #1a46c4 16%, #12306f 42%, #0b1733 68%, #070c18 100%);
+}
+.glass {
+  background: rgba(10, 18, 40, 0.46);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 30px rgba(4, 10, 28, 0.18);
+  backdrop-filter: blur(18px);
+}
+.action-dock {
+  position: fixed;
+  z-index: 30;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 430px;
+  padding: 28px 20px 104px;
+  background: linear-gradient(to top, #070c18 92px, rgba(7, 12, 24, 0.94) 128px, transparent);
+}
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  display: inline-block; vertical-align: middle; line-height: 1; font-size: 20px;
+}
+.material-symbols-outlined.fill { font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+input, textarea, select { @apply outline-none; }
+input::placeholder, textarea::placeholder { @apply text-outline; }
+.font-label { font-variant-numeric: tabular-nums; letter-spacing: 0.01em; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
+@media print { .no-print { display: none !important; } }
